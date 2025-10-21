@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/7NWxKXSy/dog.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.ibb.co.com/mFSH9kkf/pawtrt.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Rental",
+    "providerName": "WarmPaws Supplies",
+    "providerEmail": "support@warmpaws.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Rent heated beds to keep your pets cozy during the chilly nights.",
+    "image": "https://i.ibb.co.com/gLjP6wtJ/pawbed.jpg",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Nutrition Consultation",
+    "providerName": "HealthyPaws Vet",
+    "providerEmail": "contact@healthypaws.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Personalized diet plans to boost your pet's immunity and health in winter.",
+    "image": "https://i.ibb.co.com/SwN2nhQg/n.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Winter Walking Gear",
+    "providerName": "PupGear Co.",
+    "providerEmail": "sales@pupgear.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Reflective jackets and booties to ensure safe and warm winter walks.",
+    "image": "https://i.ibb.co.com/84XVRPHm/walking.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Emergency Cold-Weather Vet Checkup",
+    "providerName": "SnowSafe Veterinary",
+    "providerEmail": "help@snowsafevet.com",
+    "price": 50,
+    "rating": 5.0,
+    "slotsAvailable": 1,
+    "description": "Immediate vet services for pets showing signs of cold stress or frostbite.",
+    "image": "https://i.ibb.co.com/8nbPBHF5/coldweather.jpg",
+    "category": "Healthcare"
+  }
+]
