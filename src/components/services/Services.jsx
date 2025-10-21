@@ -28,9 +28,9 @@ const Services = () => {
       <div className="card-body">
         <fieldset className="fieldset">
           <label className="label">Name</label>
-          <input type="text" name="name" className="input" placeholder="Type Your Name" />
+          <input type="text" name="name" className="input" placeholder="Type Your Name" required/>
           <label className="label">Email</label>
-          <input type="email" name="email" className="input" placeholder="Type Your Email" />
+          <input type="email" name="email" className="input" placeholder="Type Your Email" required/>
          
           <button type='submit' onClick={handleBookNow} className="btn btn-neutral mt-4">Book Now</button>
         </fieldset>

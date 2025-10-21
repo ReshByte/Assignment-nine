@@ -3,6 +3,9 @@ import HomeLayout from "../homeLayout/HomeLayout";
 import Home from "../home/Home";
 import Services from "../services/Services";
 import ImgSlider from "../imageSlider/ImgSlider";
+import Login from "../login/Login";
+import Register from "../register/Register";
+import Profile from "../Profile/Profile";
 
 
 
@@ -25,6 +28,18 @@ const router = createBrowserRouter([
         path:"/",
         element:<ImgSlider></ImgSlider>,
        },
+       {
+        path:"/login",
+        element:<Login></Login>,
+       },
+       {
+        path:"/register",
+        element:<Register></Register>,
+       },
+       {
+        path:"/profile",
+        element:<Profile></Profile>
+       }
 
      ]
      },
