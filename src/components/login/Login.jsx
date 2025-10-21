@@ -1,11 +1,13 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
 
     const {signIn} = use(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
 
     const handleLogin=(e)=>{
@@ -17,7 +19,8 @@ const Login = () => {
            signIn(email,password)
            .then(result => {
             const user = result.user;
-            console.log(user);
+            toast.success('Login successfull!');
+            navigate(`${location.state? location.state : "/"}`)
             
 
            })
@@ -53,7 +56,7 @@ const Login = () => {
         </fieldset>
       </form>
     </div>
-    <ToastContainer></ToastContainer>
+    
         </div>
     );
 };

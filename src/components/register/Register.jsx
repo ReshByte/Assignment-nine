@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const Register = () => {
 
-    const {createUser,setUser} = use(AuthContext);
+    const {createUser,setUser,updateUser} = use(AuthContext);
 
 
     const handleRegister = (e) =>{
@@ -19,7 +19,15 @@ const Register = () => {
       createUser(email,password)
       .then((result)=>{
         const user=result.user;
-        setUser(user);
+        updateUser({displayName:name, photoURL:photo}).then(()=>{
+            setUser({...user , displayName:name, photoURL:photo});
+        })
+        .catch((error)=>{
+            console.log(error);
+            setUser(user);
+            
+        })
+      
         
       })
       .catch((error)=>{  
