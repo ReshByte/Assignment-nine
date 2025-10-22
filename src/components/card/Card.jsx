@@ -6,7 +6,7 @@ const Card = ({category}) => {
     
     
     return (
-        <div className="bg-gray border-1 border-400-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-sm">
+        <div className="bg-gray border-0 bg-indigo-100 border-400-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-sm">
     
       <img
         src={category.image}
@@ -30,7 +30,7 @@ const Card = ({category}) => {
         <p className="text-gray-800 font-medium mb-4">Price: ${category.price}</p>
 
        
-        <Link to={`/services/${category.serviceId}`} className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors">
+        <Link to={`/services/${category.serviceId}`} className="w-full btn btn-primary text-white py-2 px-2 rounded hover:bg-blue-600 transition-colors">
           View Details
         </Link>
       </div>

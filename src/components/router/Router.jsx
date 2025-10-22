@@ -8,6 +8,7 @@ import Register from "../register/Register";
 import Profile from "../Profile/Profile";
 import PrivateRoute from "../provider/PrivateRoute";
 import UpdateProfile from "../updateProfile/UpdateProfile";
+import Loading from "../loading/Loading";
 
 
 
@@ -35,10 +36,16 @@ const router = createBrowserRouter([
         path:"/register",
         element:<Register></Register>,
        },
+        {
+    path: "/services",
+    element: <PrivateRoute><Services /></PrivateRoute>,
+    loader: () => fetch("/service.json").then(res => res.json()),
+     },
        {
         path:"/services/:id",
         element:<PrivateRoute><Services></Services></PrivateRoute>,
         loader:()=>fetch("/service.json"), 
+        hydrateFallbackElement: <Loading></Loading>
        },
        {
         path:"/update",

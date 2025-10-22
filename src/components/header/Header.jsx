@@ -25,13 +25,13 @@ const Header = () => {
   }
 
     return (
-        <div className="flex justify-between items-center w-11/12 mx-auto py-5">
+        <div className="bg-[#faf5ee] flex justify-between items-center mx-auto py-5 px-20">
        <div>
           <img className='rounded-full w-15 h-15' src={pawsIcon} alt="" />
        </div>
 
     
-      <div className="nav flex gap-5 text-accent">
+      <div className="nav flex gap-5 font-semibold text-blue-700">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/profile">My Profile</NavLink>
@@ -40,14 +40,14 @@ const Header = () => {
       <div className="login-btn flex gap-5">
        
    <div className="relative group w-12 h-12">
-  {/* Profile Image */}
+  
   <img
     className="w-12 h-12 rounded-full object-cover cursor-pointer"
     src={user ? user.photoURL : userIcon}
     alt={user?.displayName || "User"}
   />
 
-  {/* Display Name (shown on hover) */}
+ 
   <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1
                    bg-black text-white text-xs font-medium px-2 py-1 rounded opacity-0
                    group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -60,8 +60,10 @@ const Header = () => {
          {
           user ? <button onClick={handleLogOut} className='btn btn-primary'>Logout</button> :  <Link to="/login" className='btn btn-primary '>Login</Link>
           }
+            <Link to="/register" className='btn btn-primary'>Sign Up</Link>
       </div>
-
+        
+      
      
     </div>
 

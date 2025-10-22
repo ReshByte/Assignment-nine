@@ -26,7 +26,7 @@ const winterTips = [
 
 const WinterTipsCards = () => {
   return (
-    <div className="min-h-screen w-11/12 mx-auto pt-40 px-4">
+    <div className="min-h-screen w-11/12 mx-auto pt-40 px-4  ">
       <h1 className="text-3xl font-bold text-center text-white-800 mb-10">
         Winter Care Tips for Pets
       </h1>
@@ -35,7 +35,7 @@ const WinterTipsCards = () => {
         {winterTips.map((tip) => (
           <div
             key={tip.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className=" bg-indigo-100 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
           >
             <img
               src={tip.image}

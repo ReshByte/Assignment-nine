@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswo
 
 export const AuthContext = createContext();
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 
 const AuthProvider = ({children}) => {

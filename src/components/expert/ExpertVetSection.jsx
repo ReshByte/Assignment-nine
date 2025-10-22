@@ -42,7 +42,7 @@ const ExpertVetSection = () => {
         {vets.map((vet) => (
           <div
             key={vet.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 text-center p-6"
+            className="bg-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 text-center p-6"
           >
             <img
               src={vet.image}
