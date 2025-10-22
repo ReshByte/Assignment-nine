@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link, NavLink, useParams } from 'react-router';
+import { Link, NavLink, useLoaderData, useParams } from 'react-router';
 import userIcon from "../../assets/user.png";
 import pawsIcon from "../../assets/paws.jpg"
 import { AuthContext } from '../provider/AuthProvider';
@@ -7,7 +7,6 @@ import { toast, ToastContainer,  } from 'react-toastify';
 
 const Header = () => {
 
-  // const {id} = useParams()
 
   const {user,logOut} = use(AuthContext);
 

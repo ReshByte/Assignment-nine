@@ -37,9 +37,9 @@ const router = createBrowserRouter([
         element:<Register></Register>,
        },
         {
-    path: "/services",
-    element: <PrivateRoute><Services /></PrivateRoute>,
-    loader: () => fetch("/service.json").then(res => res.json()),
+       path: "/services",
+       element: <PrivateRoute><Services></Services></PrivateRoute>,
+       loader: () => fetch("/service.json").then(res => res.json()),
      },
        {
         path:"/services/:id",
