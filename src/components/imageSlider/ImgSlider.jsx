@@ -1,53 +1,128 @@
-import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-const images = [
-  {
-    src: 'https://i.ibb.co/84XVRPHm/walking.jpg',
-    caption: 'Enjoy a winter walk with your furry friend!'
-  },
-  {
-    src: 'https://i.ibb.co/8nbPBHF5/coldweather.jpg',
-    caption: 'Keep your pets warm during the chilly days.'
-  },
-  {
-    src: 'https://i.ibb.co/gLjP6wtJ/pawbed.jpg',
-    caption: 'A cozy bed for your pet to relax.'
-  }
-];
-
-export default function ImgSlider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // 3000ms = 3 seconds
-    return () => clearInterval(interval);
-  }, []);
-
+const ImgSlider = () => {
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
+   <div className="w-full h-full">
+  <Swiper
+    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    spaceBetween={30}
+    slidesPerView={2} // default for large screens
+    navigation
+    pagination={{ clickable: true }}
+    scrollbar={{ draggable: true }}
+    style={{
+      '--swiper-navigation-color': '#000',
+      '--swiper-pagination-color': '#000',
+    }}
+    breakpoints={{
+      640: {
+        slidesPerView: 1, // small devices (sm)
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1, // medium devices (md)
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 2, // large devices (lg)
+        spaceBetween: 30,
+      },
+    }}
+  >
+    <SwiperSlide>
       <img
-        src={images[currentIndex].src}
-        alt="pet"
-        className="w-full h-96 object-cover transition-transform duration-700 ease-in-out"
+        src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
+        alt=""
+        className="w-full"
       />
-      <div className="absolute bottom-4 left-4 text-white bg-black bg-opacity-50 p-2 rounded">
-        {images[currentIndex].caption}
-      </div>
-      {/* Dots */}
-      <div className="absolute bottom-4 right-4 flex gap-2">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`h-3 w-3 rounded-full cursor-pointer ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
-    </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/Y4mLRMvb/dog-1.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/QvvjggY1/64135685de6c9f6840ec8e4c-cute-puppies.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
+        alt=""
+        className="w-full"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/Y4mLRMvb/dog-1.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/QvvjggY1/64135685de6c9f6840ec8e4c-cute-puppies.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
+        alt=""
+        className="w-full"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/Y4mLRMvb/dog-1.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/QvvjggY1/64135685de6c9f6840ec8e4c-cute-puppies.jpg"
+        alt=""
+        className="w-full h-[480px]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+    </SwiperSlide>
+  
+  </Swiper>
+</div>
+
   );
-}
+};
+
+export default ImgSlider;

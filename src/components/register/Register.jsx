@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
 
@@ -21,6 +22,10 @@ const Register = () => {
         const user=result.user;
         updateUser({displayName:name, photoURL:photo}).then(()=>{
             setUser({...user , displayName:name, photoURL:photo});
+            sendEmailVerification(user)
+            .then(()=>{
+              alert('Please verify your email')
+            })
         })
         .catch((error)=>{
             console.log(error);

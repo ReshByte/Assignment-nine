@@ -1,13 +1,14 @@
-import React, { use } from 'react';
+import React, { use, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const Login = () => {
 
-    const {signIn} = use(AuthContext);
+    const {signIn,resetPassword} = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const emailRef = useRef();
 
 
     const handleLogin=(e)=>{
@@ -19,15 +20,33 @@ const Login = () => {
            signIn(email,password)
            .then(result => {
             const user = result.user;
-            toast.success('Login successfull!');
+           toast.success('Login toasted!')
+            
+            
+           
+            if(!user.emailVerified){
+              toast('Please verify your email')
+            }
             navigate(`${location.state? location.state : "/"}`)
             
 
            })
            .catch((error) => {
-            toast(error.message);
+            toast.error(error.message)
            })
            
+    }
+
+
+    const handleForgetPassword = () =>{
+  //  console.log('mail',emailRef);
+    const email = emailRef.current.value;
+    resetPassword(email)
+    .then(()=>{
+      toast.success('Please check your email');
+    })
+    .catch()
+   
     }
 
 
@@ -40,12 +59,13 @@ const Login = () => {
 
 
           <label className="label">Email</label>
-          <input name="email" type="email" className="input" placeholder="Email" required/>
+          <input ref={emailRef} name="email" type="email" className="input" placeholder="Email" required/>
           
           
           <label className="label">Password</label>
           <input name="password" type="password" className="input" placeholder="Password" required/>
-          
+           
+           <div onClick={handleForgetPassword}><a className='link link-hover'>Forgot Password?</a></div>
 
           
           <button type='submit' className="btn btn-neutral mt-4">Login</button>
@@ -56,7 +76,7 @@ const Login = () => {
         </fieldset>
       </form>
     </div>
-    
+   
         </div>
     );
 };

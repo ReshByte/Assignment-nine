@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import userIcon from '../../assets/user.png'
+import { Link } from 'react-router';
 
 const Profile = () => {
 
@@ -12,7 +13,7 @@ const Profile = () => {
              
            <img className='w-15 h-15 rounded-full mx-auto ' src={`${user? user.photoURL : userIcon }`} alt="" />
            <p className='font-semibold '>Username: {`${user? user.displayName : "No user" }`} </p>
-           <button className='btn btn-success '>Update Profile</button>
+           <Link to="/update" className='btn btn-success '>Update Profile</Link>
           </div>
         </div>
     );

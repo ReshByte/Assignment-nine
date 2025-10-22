@@ -7,6 +7,7 @@ import Login from "../login/Login";
 import Register from "../register/Register";
 import Profile from "../Profile/Profile";
 import PrivateRoute from "../provider/PrivateRoute";
+import UpdateProfile from "../updateProfile/UpdateProfile";
 
 
 
@@ -22,13 +23,10 @@ const router = createBrowserRouter([
         element:<Home></Home>
        },
        {
-        path:"/services",
-        element:<Services></Services>
+        path:"/profile",
+        element:<Profile></Profile>
        },
-       {
-        path:"/",
-        element:<ImgSlider></ImgSlider>,
-       },
+      
        {
         path:"/login",
         element:<Login></Login>,
@@ -38,8 +36,13 @@ const router = createBrowserRouter([
         element:<Register></Register>,
        },
        {
-        path:"/profile",
-        element:<PrivateRoute><Profile></Profile></PrivateRoute>,
+        path:"/services/:id",
+        element:<PrivateRoute><Services></Services></PrivateRoute>,
+        loader:()=>fetch("/service.json"), 
+       },
+       {
+        path:"/update",
+        element:<UpdateProfile></UpdateProfile>
        }
 
      ]
