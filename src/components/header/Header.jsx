@@ -28,7 +28,7 @@ const Header = () => {
         <div className="bg-[#faf5ee] flex justify-between items-center mx-auto py-5 px-20 max-sm:flex-col max-sm:space-y-5">
        <div>
           <img className='rounded-full w-15 h-15' src={pawsIcon} alt="" />
-       </div>
+       </div >
 
     
       <div className="nav flex gap-5 font-semibold text-blue-700">
