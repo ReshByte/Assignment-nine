@@ -47,6 +47,7 @@ const Login = () => {
       signInWithPopup(auth,provider)
       .then((result)=>{
         console.log(result);
+         navigate(`${location.state? location.state : "/"}`)
         
       })
       .catch((error)=>{

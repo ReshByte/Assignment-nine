@@ -31,7 +31,7 @@ const Services = () => {
 
 
     return (
- <div className='space-y-10'>
+ <div className='space-y-10 '>
 
     <div className="max-w-md mx-auto mt-10 p-6 rounded-2xl shadow-xl bg-gradient-to-br from-blue-50 via-white to-blue-100 border border-blue-200 hover:shadow-2xl transition-all duration-300">
       {/* Image */}
@@ -96,7 +96,9 @@ const Services = () => {
       </div>
     </div>
 
-         <form onSubmit={handleServices} className="hero bg-base-200   flex justify-center items-center ">
+
+
+         <form onSubmit={handleServices} className="hero  flex justify-center items-center ">
 
    
 
@@ -120,7 +122,7 @@ const Services = () => {
     </div>
   </div>
   
-</form>
+       </form>
   
  </div>
     );

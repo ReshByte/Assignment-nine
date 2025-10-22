@@ -19,6 +19,10 @@ const AuthProvider = ({children}) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth,email,password);
   }
+  const creatingUser = (email,password) =>{
+    setLoading(true);
+    return createUserWithEmailAndPassword(auth,email,password);
+  }
 
   const signIn = (email,password) => {
     setLoading(true);
@@ -64,6 +68,7 @@ const AuthProvider = ({children}) => {
     setLoading,
     updateUser,
     resetPassword,
+    creatingUser,
   }
 
  return <AuthContext value={authData}>{children}</AuthContext>

@@ -3,7 +3,7 @@ import { Link, NavLink, useParams } from 'react-router';
 import userIcon from "../../assets/user.png";
 import pawsIcon from "../../assets/paws.jpg"
 import { AuthContext } from '../provider/AuthProvider';
-import { toast,  } from 'react-toastify';
+import { toast, ToastContainer,  } from 'react-toastify';
 
 const Header = () => {
 
@@ -25,7 +25,7 @@ const Header = () => {
   }
 
     return (
-        <div className="bg-[#faf5ee] flex justify-between items-center mx-auto py-5 px-20">
+        <div className="bg-[#faf5ee] flex justify-between items-center mx-auto py-5 px-20 max-sm:flex-col max-sm:space-y-5">
        <div>
           <img className='rounded-full w-15 h-15' src={pawsIcon} alt="" />
        </div>
@@ -64,8 +64,9 @@ const Header = () => {
       </div>
         
       
-     
+    
     </div>
+
 
     
     );
