@@ -9,6 +9,7 @@ import Profile from "../Profile/Profile";
 import PrivateRoute from "../provider/PrivateRoute";
 import UpdateProfile from "../updateProfile/UpdateProfile";
 import Loading from "../loading/Loading";
+import ServiceComponent from "../Service/ServiceComponent";
 
 
 
@@ -38,9 +39,9 @@ const router = createBrowserRouter([
        },
         {
        path: "/services",
-       element: <PrivateRoute><Services></Services></PrivateRoute>,
-       loader: () => fetch("/service.json").then(res => res.json()),
-     },
+       element: <PrivateRoute><ServiceComponent></ServiceComponent></PrivateRoute>,
+       loader: () => fetch("/service.json"),
+       },
        {
         path:"/services/:id",
         element:<PrivateRoute><Services></Services></PrivateRoute>,

@@ -21,15 +21,15 @@ const ImgSlider = () => {
     }}
     breakpoints={{
       640: {
-        slidesPerView: 1, // small devices (sm)
+        slidesPerView: 1, 
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 1, // medium devices (md)
+        slidesPerView: 1, 
         spaceBetween: 25,
       },
       1024: {
-        slidesPerView: 2, // large devices (lg)
+        slidesPerView: 2,
         spaceBetween: 30,
       },
     }}
@@ -38,7 +38,7 @@ const ImgSlider = () => {
       <img
         src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
         alt=""
-        className="w-full"
+        className="w-full h-[480px]"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -59,14 +59,14 @@ const ImgSlider = () => {
       <img
         src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
         alt=""
-        className="w-full h-full object-cover"
+        className="w-full h-[480px] object-cover"
       />
     </SwiperSlide>
     <SwiperSlide>
       <img
         src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
         alt=""
-        className="w-full"
+        className="w-full h-[480px]"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -87,14 +87,14 @@ const ImgSlider = () => {
       <img
         src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
         alt=""
-        className="w-full h-full object-cover"
+        className="w-full h-[480px] object-cover"
       />
     </SwiperSlide>
     <SwiperSlide>
       <img
         src="https://i.ibb.co/RT4n2k4q/puppy-care-wellness-guide-questions-featured.jpg"
         alt=""
-        className="w-full"
+        className="w-full h-[480px]"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -115,7 +115,7 @@ const ImgSlider = () => {
       <img
         src="https://i.ibb.co/DgHY1YRB/pexels-freestockpro-1174081.jpg"
         alt=""
-        className="w-full h-full object-cover"
+        className="w-full h-[480px] object-cover"
       />
     </SwiperSlide>
   

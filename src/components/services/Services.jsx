@@ -16,18 +16,7 @@ const Services = () => {
   setDetails(filteredData);
   },[data,id])
 
-    const handleServices = (e) =>{
-      e.preventDefault();
-      const name = e.target.name.value;
-      const email = e.target.email.value;
-      
-      e.target.reset();
-    }
-
-   const handleBookNow = () =>{
-    toast.success('Submitted Successfully!')
-    
-   }
+ 
 
 
     return (
@@ -98,31 +87,7 @@ const Services = () => {
 
 
 
-         <form onSubmit={handleServices} className="hero  flex justify-center items-center ">
-
-   
-
-
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div  className="text-center lg:text-left">
-      
-     
-    </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
-        <fieldset className="fieldset">
-          <label className="label">Name</label>
-          <input type="text" name="name" className="input" placeholder="Type Your Name" required/>
-          <label className="label">Email</label>
-          <input type="email" name="email" className="input" placeholder="Type Your Email" required/>
-         
-          <button type='submit' onClick={handleBookNow} className="btn btn-neutral mt-4">Book Now</button>
-        </fieldset>
-      </div>
-    </div>
-  </div>
-  
-       </form>
+        
   
  </div>
     );
