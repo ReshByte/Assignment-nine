@@ -27,13 +27,13 @@ const Header = () => {
  <div className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-slate-900 shadow-md">
   <div className="container mx-auto flex justify-between items-center py-4 px-6 max-sm:flex-col max-sm:space-y-4">
 
-    {/* Logo */}
+
     <div className="flex items-center gap-3">
       <img src={pawsIcon} alt="Logo" className="w-14 h-14 rounded-full border-2 border-white shadow-md" />
       <span className="text-2xl font-bold tracking-wide text-blue-700">WarmPaws</span>
     </div>
 
-    {/* Navigation Links */}
+  
     <div className="nav flex gap-5 font-semibold max-sm:flex-wrap max-sm:justify-center">
       <NavLink
         to="/"
