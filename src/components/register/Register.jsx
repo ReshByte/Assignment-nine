@@ -45,7 +45,7 @@ const Register = () => {
             })
         })
         .catch((error)=>{
-            console.log(error);
+         //   console.log(error);
             setUser(user);
             
         })
@@ -64,11 +64,11 @@ const Register = () => {
     const handleRegisterGoogle = ()=>{
         signInWithPopup(auth,provider)
             .then((result)=>{
-              console.log(result);
+             // console.log(result);
               
             })
             .catch((error)=>{
-              console.log(error);
+            //  console.log(error);
               
             })
 

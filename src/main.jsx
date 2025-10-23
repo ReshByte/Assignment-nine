@@ -7,6 +7,8 @@ import router from './components/router/Router.jsx'
 import AuthProvider from './components/provider/AuthProvider.jsx'
 import { ToastContainer } from 'react-toastify'
 import { Toaster } from 'react-hot-toast'
+import "animate.css";
+
 
 
  

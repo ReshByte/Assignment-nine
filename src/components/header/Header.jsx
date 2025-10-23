@@ -17,7 +17,7 @@ const Header = () => {
       toast.success('Successfully logout!')
     })
     .catch((error)=>{
-      console.log(error);
+     // console.log(error);
       
     })
    
@@ -69,10 +69,10 @@ const Header = () => {
       </NavLink>
     </div>
 
-    {/* User & Auth Buttons */}
+   
     <div className="login-btn flex gap-3 items-center max-sm:flex-wrap max-sm:justify-center">
 
-      {/* User Avatar with Tooltip */}
+    
       <div className="relative group w-12 h-12">
         <img
           src={user ? user.photoURL : userIcon}
@@ -86,7 +86,7 @@ const Header = () => {
         </span>
       </div>
 
-      {/* Auth Buttons */}
+     
       {user ? (
         <button
           onClick={handleLogOut}
