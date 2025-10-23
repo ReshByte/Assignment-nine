@@ -1,8 +1,10 @@
-import React, { use, useRef } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { auth, AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { ToastBar } from 'react-hot-toast';
 
 
 const provider = new GoogleAuthProvider();
@@ -13,6 +15,12 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const emailRef = useRef();
+    const [eye,setEye] = useState(false);
+    
+        const handleEye =(e)=>{
+        e.preventDefault();
+        setEye(!eye)
+        }
 
 
     const handleLogin=(e)=>{
@@ -47,6 +55,7 @@ const Login = () => {
       signInWithPopup(auth,provider)
       .then((result)=>{
        // console.log(result);
+       ToastBar("Login Successfully");
          navigate(`${location.state? location.state : "/"}`)
         
       })
@@ -81,8 +90,17 @@ const Login = () => {
           <input ref={emailRef} name="email" type="email" className="input" placeholder="Email" required/>
           
           
-          <label className="label">Password</label>
-          <input name="password" type="password" className="input" placeholder="Password" required/>
+         <div className='relative'>
+                    <label className="label">Password</label>
+                  <input name='password' 
+                   type={eye ? 'text':'password'}
+                   className="input" 
+                   placeholder="Password" 
+                   required />
+                   <button
+                   onClick={handleEye} 
+                   className=" absolute top-8 right-6">{eye ? <FaEyeSlash /> : <FaEye />}</button>
+                  </div>
            
            <div onClick={handleForgetPassword}><a className='link link-hover'>Forgot Password?</a></div>
 
